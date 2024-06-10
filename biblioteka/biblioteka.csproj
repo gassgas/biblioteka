@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8C1765A-54DB-4DCC-B058-0DDCF87A48F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>biblioteka</RootNamespace>
+    <AssemblyName>biblioteka</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bibliotekar.cs" />
+    <Compile Include="BibliotekarLoby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BibliotekarLoby.Designer.cs">
+      <DependentUpon>BibliotekarLoby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Citalac.cs" />
+    <Compile Include="Covek.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaBibliotekar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaBibliotekar.Designer.cs">
+      <DependentUpon>FormaBibliotekar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaCitaoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaCitaoc.Designer.cs">
+      <DependentUpon>FormaCitaoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaDodajKnjigu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDodajKnjigu.Designer.cs">
+      <DependentUpon>FormaDodajKnjigu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaDodavanjaCitaoca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDodavanjaCitaoca.Designer.cs">
+      <DependentUpon>FormaDodavanjaCitaoca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaKnjigaUnesiIliEdituj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaKnjigaUnesiIliEdituj.Designer.cs">
+      <DependentUpon>FormaKnjigaUnesiIliEdituj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPisacEditIliUnesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPisacEditIliUnesi.Designer.cs">
+      <DependentUpon>FormaPisacEditIliUnesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIzdavanjeKnjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIzdavanjeKnjige.Designer.cs">
+      <DependentUpon>FormIzdavanjeKnjige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPisac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPisac.Designer.cs">
+      <DependentUpon>FormPisac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVracanjeKnjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVracanjeKnjige.Designer.cs">
+      <DependentUpon>FormVracanjeKnjige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBibliotekar.cs" />
+    <Compile Include="ICitalac.cs" />
+    <Compile Include="ICovek.cs" />
+    <Compile Include="IKnjiga.cs" />
+    <Compile Include="IOsoba.cs" />
+    <Compile Include="IPisac.cs" />
+    <Compile Include="IPolica.cs" />
+    <Compile Include="IProstorija.cs" />
+    <Compile Include="Knjiga.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Napomena.cs" />
+    <Compile Include="Osoba.cs" />
+    <Compile Include="Pisac.cs" />
+    <Compile Include="Polica.cs" />
+    <Compile Include="POLICA2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POLICA2.Designer.cs">
+      <DependentUpon>POLICA2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prostorija.cs" />
+    <Compile Include="PROSTORIJA37.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PROSTORIJA37.Designer.cs">
+      <DependentUpon>PROSTORIJA37.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BibliotekarLoby.resx">
+      <DependentUpon>BibliotekarLoby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaBibliotekar.resx">
+      <DependentUpon>FormaBibliotekar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaCitaoc.resx">
+      <DependentUpon>FormaCitaoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaDodajKnjigu.resx">
+      <DependentUpon>FormaDodajKnjigu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaDodavanjaCitaoca.resx">
+      <DependentUpon>FormaDodavanjaCitaoca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaKnjigaUnesiIliEdituj.resx">
+      <DependentUpon>FormaKnjigaUnesiIliEdituj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPisacEditIliUnesi.resx">
+      <DependentUpon>FormaPisacEditIliUnesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIzdavanjeKnjige.resx">
+      <DependentUpon>FormIzdavanjeKnjige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPisac.resx">
+      <DependentUpon>FormPisac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVracanjeKnjige.resx">
+      <DependentUpon>FormVracanjeKnjige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POLICA2.resx">
+      <DependentUpon>POLICA2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PROSTORIJA37.resx">
+      <DependentUpon>PROSTORIJA37.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl6.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-VIVA-0.75L-HIDROACTIV.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4d3b7b841171ec4101e76a68172f0f7e.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
